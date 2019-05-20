@@ -1,0 +1,120 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+.App ul {
+  margin: 0;
+  list-style: none;
+  padding: 15px;
+  background: #BBD1D1;
+  border-radius: 10px;
+  min-height: 100px;
+  border: 3px solid #BBD1D1;
+}
+
+.App ul li {
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.2;
+  border-radius: 5px;
+  cursor: move;
+  background: #BBD1D1;
+  border: 2px solid #384546;
+}
+.App ul li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+
+.App li .drag {
+  margin-right: 15px;
+}
+
+.App li .drag svg {
+  color: black;
+}
+
+.App li svg {
+  height: 2rem;
+  color: #fff;
+}
+
+.App .close {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FF1C1C;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.App .left .close {
+  cursor: pointer;
+}
+
+.App .right .close {
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.App .close:before,
+.App .close:after {
+  height: 2px;
+  width: 8px;
+  display: block;
+  content: '';
+  position: absolute;
+  background: black;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+}
+
+
+.App .close:before {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+}
+
+.App .close:after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.App .align {
+  text-align: center;
+}
+
+.App button {
+  font-size: 17px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+
+.App button:hover {
+  opacity: 0.8;
+}
+
+.App .message {
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 15px;
+  background: #25FF71;
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.App .message.alert {
+  opacity: 1;
+}
+
